@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+ 
+   
+  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+	        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>        
+	        <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=employeedb</property>
+	        <property name="hibernate.connection.username">employee</property>
+  <property name="hibernate.connection.password">employee</property>
+  <property name="show_sql">true</property>
+
+ 
+  <property name="hibernate.hbm2ddl.auto">create</property>
+  <mapping  class="com.example.hibernateOneToOne.dto.UserDetails"/>
+  <mapping  class="com.example.hibernateOneToOne.dto.Laptop"/>
+ 
+  
+ </session-factory>
+ 
+</hibernate-configuration>
